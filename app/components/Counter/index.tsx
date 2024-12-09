@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import animations from './animations';
-import Title from '../Title';
-import { TitleTypes } from '../Title/helpers';
+import Title, { TitleTypes } from '../Title';
 import Paragraph from '../Paragraph';
 
 interface Props {

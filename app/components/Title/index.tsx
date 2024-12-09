@@ -1,8 +1,13 @@
 import { motion } from 'motion/react';
 import { ReactNode } from 'react';
-import { getClassName, TitleTypes } from './helpers';
 import animations from './animations';
-import classNames from 'classnames';
+
+export enum TitleTypes {
+  h1 = 'h1',
+  h2 = 'h2',
+  h3 = 'h3',
+  h4 = 'h4',
+}
 
 interface Props {
   className?: string;
@@ -14,7 +19,7 @@ const Title = ({ className = '', children, as = TitleTypes.h1 }: Props) => {
   const MotionComponent = motion.create(as, { forwardMotionProps: true });
 
   return (
-    <MotionComponent className={classNames(getClassName(as), className)} {...animations.title}>
+    <MotionComponent className={className} {...animations.title}>
       {children}
     </MotionComponent>
   );

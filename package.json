@@ -19,7 +19,8 @@
     "isbot": "^4.1.0",
     "motion": "^11.13.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-typed": "^2.0.12"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.15.0",
