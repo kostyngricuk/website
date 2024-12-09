@@ -6,7 +6,7 @@ import { ThemeColors } from 'tailwind.config';
 import Paragraph from '~/components/Paragraph';
 import Title, { TitleTypes } from '~/components/Title';
 import animations from './animations';
-import AccentText from '~/components/AccentText';
+import AccentText, { Sizes } from '~/components/AccentText';
 import { ReactTyped } from 'react-typed';
 
 interface Tech {
@@ -45,10 +45,11 @@ export default function Hero() {
       <div className="container">
         <Title as={TitleTypes.h1}>Kanstantsin Hrytsuk</Title>
         <Paragraph>
-          Frontend Developer with <AccentText color={ThemeColors.green}>6+ years</AccentText> of experience
+          <AccentText color={ThemeColors.orange}>Frontend Developer</AccentText> with{' '}
+          <AccentText color={ThemeColors.green}>6+ years</AccentText> of experience
           <br />
           Development of modern websites and mobile apps using{' '}
-          <AccentText color={techStack[indexTech].color}>
+          <AccentText color={techStack[indexTech].color} size={Sizes.large}>
             <ReactTyped
               strings={techStack.map(tech => tech.text)}
               typeSpeed={100}

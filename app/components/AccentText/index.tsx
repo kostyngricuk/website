@@ -18,11 +18,20 @@ interface Props {
   children: ReactNode;
   color?: ThemeColors;
   size?: Sizes;
+  isUnderlined?: boolean;
 }
 
-const AccentText = ({ className = '', children, color = ThemeColors.black, size = Sizes.large }: Props) => {
+const AccentText = ({
+  className = '',
+  children,
+  color = ThemeColors.black,
+  size = Sizes.base,
+  isUnderlined = false,
+}: Props) => {
+  const Tag = motion.create(isUnderlined ? 'u' : 'span');
+
   return (
-    <motion.strong
+    <Tag
       className={className}
       {...animations.accentText}
       style={{
@@ -32,7 +41,7 @@ const AccentText = ({ className = '', children, color = ThemeColors.black, size 
       }}
     >
       {children}
-    </motion.strong>
+    </Tag>
   );
 };
 

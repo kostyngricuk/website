@@ -16,7 +16,7 @@ interface Props {
 }
 
 const Title = ({ className = '', children, as = TitleTypes.h1 }: Props) => {
-  const MotionComponent = motion.create(as, { forwardMotionProps: true });
+  const MotionComponent = motion.create(as);
 
   return (
     <MotionComponent className={className} {...animations.title}>

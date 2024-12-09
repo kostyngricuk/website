@@ -46,7 +46,7 @@ export default {
     extend: {
       fontSize: {
         sm: ['14px', '20px'],
-        base: ['22px', '32px'],
+        base: ['22px', '38px'],
         lg: ['30px', '38px'],
         xl: ['44px', '52px'],
       },
