@@ -18,8 +18,8 @@ export default function Hero() {
       <div className="container">
         <Title as={TitleTypes.h1}>Kanstantsin Hrytsuk</Title>
         <Paragraph>
-          I am a <AccentText color={ThemeColors.orange}>Frontend Developer</AccentText> with experience more then{' '}
-          <AccentText color={ThemeColors.green}>6+ years</AccentText>
+          I am a <AccentText color={ThemeColors.orange}>Frontend Developer</AccentText> with more then{' '}
+          <AccentText color={ThemeColors.green}>6+ years</AccentText> of experience.
         </Paragraph>
         <Paragraph>
           My responsibilities include teamwork, code review, testing and deployment.

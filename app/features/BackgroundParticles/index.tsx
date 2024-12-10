@@ -12,7 +12,7 @@ const options: ISourceOptions = {
       color: ThemeColors.lightOrange,
       distance: 200,
       enable: true,
-      opacity: 0.35,
+      opacity: 0.65,
       width: 1,
     },
     move: {
