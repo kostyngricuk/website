@@ -8,6 +8,7 @@ import AccentText from '~/components/AccentText';
 import TechString from './components/TechString';
 
 import animations from './animations';
+import Scene from '../Scene';
 
 export default function Hero() {
   return (
@@ -21,6 +22,7 @@ export default function Hero() {
           Development of modern websites and mobile apps using <TechString />
         </Paragraph>
       </div>
+      <Scene />
     </motion.section>
   );
 }
