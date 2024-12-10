@@ -27,10 +27,6 @@ const TECHNOLOGIES = [
     text: 'JavaScript',
     color: ThemeColors.yellow,
   },
-  {
-    text: 'HTML + CSS',
-    color: ThemeColors.red,
-  },
 ] as Technology[];
 
 const TechString = memo(function Tech() {

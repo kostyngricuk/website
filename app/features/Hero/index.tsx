@@ -8,7 +8,6 @@ import Title, { TitleTypes } from '~/components/Title';
 import AccentText from '~/components/AccentText';
 
 import TechString from './components/TechString';
-import Scene from './components/Scene';
 
 import animations from './animations';
 
@@ -19,13 +18,15 @@ export default function Hero() {
       <div className="container">
         <Title as={TitleTypes.h1}>Kanstantsin Hrytsuk</Title>
         <Paragraph>
-          <AccentText color={ThemeColors.orange}>Frontend Developer</AccentText> with{' '}
-          <AccentText color={ThemeColors.green}>6+ years</AccentText> of experience
+          I am a <AccentText color={ThemeColors.orange}>Frontend Developer</AccentText> with experience more then{' '}
+          <AccentText color={ThemeColors.green}>6+ years</AccentText>
+        </Paragraph>
+        <Paragraph>
+          My responsibilities include teamwork, code review, testing and deployment.
           <br />
-          Development of modern websites and mobile apps using <TechString />
+          I develop websites and mobile apps using modern technologies like <TechString />
         </Paragraph>
       </div>
-      <Scene />
     </motion.section>
   );
 }
