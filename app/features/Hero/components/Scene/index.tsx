@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { Canvas } from '@react-three/fiber';
 
 import { Edges, OrbitControls } from '@react-three/drei';
-import { BoxGeometry, LineDashedMaterial } from 'three';
+import * as THREE from 'three';
 
 import { ThemeColors } from 'tailwind.config';
 
@@ -10,12 +10,12 @@ import animations from './animations';
 import { Suspense } from 'react';
 
 function Cube() {
-  const geometry = new BoxGeometry(1, 4, 1);
-  const material = new LineDashedMaterial();
+  const geometry = new THREE.BoxGeometry(2.5, 2.5, 2.5);
 
   return (
-    <mesh geometry={geometry} material={material}>
+    <mesh geometry={geometry}>
       <Edges linewidth={3} scale={1.1} color={ThemeColors.orange} />
+      <meshBasicMaterial />
     </mesh>
   );
 }
@@ -27,7 +27,6 @@ function Scene() {
         <Canvas>
           <Cube />
           <OrbitControls
-            makeDefault
             rotateSpeed={2}
             minPolarAngle={0}
             maxPolarAngle={Math.PI / 1.5}
