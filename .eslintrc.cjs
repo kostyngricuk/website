@@ -81,6 +81,9 @@ module.exports = {
   rules: {
     'import/prefer-default-export': 0,
     'newline-before-return': 2,
-    'react/no-unknown-property': ['error', { ignore: ['args', 'intensity', 'position', 'geometry', 'material'] }],
+    'react/no-unknown-property': [
+      'error',
+      { ignore: ['args', 'intensity', 'position', 'geometry', 'material', 'particlesLoaded', 'options'] },
+    ],
   },
 };
