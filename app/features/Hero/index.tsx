@@ -16,7 +16,7 @@ export default function Hero() {
     <motion.section {...animations.heroSection} className="h-screen flex flex-col justify-center">
       <BackgroundParticles />
       <div className="container">
-        <Title as={TitleTypes.h1}>Kanstantsin Hrytsuk</Title>
+        <Title as={TitleTypes.h1}>Hi, there!</Title>
         <Paragraph>
           I have been working as <AccentText color={ThemeColors.orange}>Frontend Developer</AccentText> for{' '}
           <AccentText color={ThemeColors.green}>6+</AccentText> years
