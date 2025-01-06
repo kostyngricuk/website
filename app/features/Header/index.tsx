@@ -3,7 +3,7 @@ import Menu from './components/Menu';
 
 export default function Header() {
   return (
-    <header className="absolute w-full py-4">
+    <header className="absolute w-full py-4 z-10">
       <div className="container flex justify-between">
         <Logo />
         <Menu />

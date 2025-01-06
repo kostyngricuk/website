@@ -12,6 +12,10 @@ interface Technology {
 
 const TECHNOLOGIES = [
   {
+    text: 'JavaScript',
+    color: ThemeColors.yellow,
+  },
+  {
     text: 'React',
     color: ThemeColors.blue,
   },
@@ -22,10 +26,6 @@ const TECHNOLOGIES = [
   {
     text: 'React Native',
     color: ThemeColors.blue,
-  },
-  {
-    text: 'JavaScript',
-    color: ThemeColors.yellow,
   },
 ] as Technology[];
 
