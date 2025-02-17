@@ -12,7 +12,7 @@ export enum TitleTypes {
 interface Props {
   className?: string;
   children: ReactNode;
-  as?: TitleTypes;
+  as?: `${TitleTypes}`;
 }
 
 const Title = ({ className = '', children, as = TitleTypes.h1 }: Props) => {

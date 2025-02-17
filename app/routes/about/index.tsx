@@ -1,30 +1,32 @@
 import type { MetaFunction } from '@remix-run/node';
 import { motion } from 'framer-motion';
-import Title, { TitleTypes } from '~/components/Title';
+import Title from '~/components/Title';
 import Paragraph from '~/components/Paragraph';
 import AccentText from '~/components/AccentText';
 import animations from './animations';
 import { ThemeColors } from 'tailwind.config';
-import { PATHS } from '~/constants/paths';
+import { BREADCRUMBS, PAGES } from '~/constants/navigation';
 import InnerHeader from '~/features/InnerHeader';
+import { getPageTitle } from '~/utils/seo';
 
 const styles = {
   leftCol: 'w-1/2 my-10 pr-10 border-r-2 border-black border-opacity-20 hover:border-opacity-100 hover:border-orange',
-  rightCol: 'w-1/2 mr-0 my-10 ml-auto pl-10 border-l-2 border-black border-opacity-20 hover:border-opacity-100 hover:border-orange',
+  rightCol:
+    'w-1/2 mr-0 my-10 ml-auto pl-10 border-l-2 border-black border-opacity-20 hover:border-opacity-100 hover:border-orange',
 };
 
 export const meta: MetaFunction = () => {
-  return [{ title: 'About Me | Kanstantsin Hryrtsuk' }, { name: 'description', content: 'Personal website' }];
+  return [{ title: getPageTitle('about') }, { name: 'description', content: 'Personal website' }];
 };
 
 export default function Index() {
   return (
     <>
-      <InnerHeader title="About Me" breadcrumbs={[{ name: 'Home', path: PATHS.home }, { name: 'About Me' }]} />
+      <InnerHeader title={PAGES.about.name} breadcrumbs={BREADCRUMBS.about} />
       <motion.section {...animations.personalInfo} className="flex flex-col pb-20">
         <div className="container">
           <div className={styles.leftCol}>
-            <Title as={TitleTypes.h3}>Start point</Title>
+            <Title as="h3">Start point</Title>
             <Paragraph>
               Creating a lot of websites using <AccentText color={ThemeColors.red}>HTML</AccentText>,{' '}
               <AccentText color={ThemeColors.blue}>CSS</AccentText> and{' '}
@@ -36,7 +38,7 @@ export default function Index() {
             </Paragraph>
           </div>
           <div className={styles.rightCol}>
-            <Title as={TitleTypes.h3}>Codding part</Title>
+            <Title as="h3">Codding part</Title>
             <Paragraph>
               Cunfiguring and customizing <AccentText color={ThemeColors.black}>WordPress</AccentText> themes and
               plugins.
@@ -47,7 +49,7 @@ export default function Index() {
             </Paragraph>
           </div>
           <div className={styles.leftCol}>
-            <Title as={TitleTypes.h3}>Focus on the interfaces</Title>
+            <Title as="h3">Focus on the interfaces</Title>
             <Paragraph>
               Creating user interfaces using <AccentText color={ThemeColors.blue}>React</AccentText> and{' '}
               <AccentText color={ThemeColors.orange}>TypeScript</AccentText>
@@ -55,7 +57,7 @@ export default function Index() {
             <Paragraph>Work in big teams with a full cycle of development</Paragraph>
           </div>
           <div className={styles.rightCol}>
-            <Title as={TitleTypes.h3}>Deep dive</Title>
+            <Title as="h3">Deep dive</Title>
             <Paragraph>Performance optimization and SEO improvements for web applications</Paragraph>
             <Paragraph>
               Testing web applications using <AccentText color={ThemeColors.red}>Jest</AccentText> and{' '}
@@ -63,7 +65,7 @@ export default function Index() {
             </Paragraph>
           </div>
           <div className={styles.leftCol}>
-            <Title as={TitleTypes.h3}>New Experience</Title>
+            <Title as="h3">New Experience</Title>
             <Paragraph>
               Support the team of developers in creating a mobile application using{' '}
               <AccentText color={ThemeColors.blue}>React Native</AccentText>
@@ -74,7 +76,7 @@ export default function Index() {
             </Paragraph>
           </div>
           <div className={styles.rightCol}>
-            <Title as={TitleTypes.h3}>Now</Title>
+            <Title as="h3">Now</Title>
             <Paragraph>Run the technical part of the interviews for the frontend developers</Paragraph>
             <Paragraph>Write blog posts about web development</Paragraph>
             <Paragraph>Social media activities and creating video content about web development</Paragraph>

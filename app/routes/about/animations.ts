@@ -1,6 +1,6 @@
-import { Animations } from '~/types';
+import { Global } from '~/types';
 
-const animations: Animations = {
+const animations: Global.Animations = {
   personalInfo: {
     initial: {
       transform: 'translateY(100%)',

@@ -1,4 +1,4 @@
-import { Animations } from '~/types';
+import { Animations } from '~/types/helper';
 
 const animations: Animations = {
   title: {},

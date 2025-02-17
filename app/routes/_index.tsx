@@ -1,6 +1,6 @@
 import type { MetaFunction } from '@remix-run/node';
 import { motion } from 'framer-motion';
-import Title, { TitleTypes } from '~/components/Title';
+import Title from '~/components/Title';
 import Paragraph from '~/components/Paragraph';
 import AccentText from '~/components/AccentText';
 import TechString from '~/features/TechString';
@@ -18,7 +18,7 @@ export default function Index() {
   return (
     <motion.section {...animations.heroSection} className="h-screen flex flex-col justify-center">
       <div className="container">
-        <Title as={TitleTypes.h1}>Hi, there!</Title>
+        <Title as="h1">Hi, there!</Title>
         <Paragraph>
           I am experienced <AccentText color={ThemeColors.orange}>Frontend Developer</AccentText> with deep knowledge in{' '}
           <TechString />

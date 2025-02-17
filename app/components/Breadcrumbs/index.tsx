@@ -5,11 +5,11 @@ export interface Breadcrumb {
   path?: string;
 }
 
-interface BreadcrumbsProps {
+interface Props {
   paths: Breadcrumb[];
 }
 
-function Breadcrumbs({ paths }: BreadcrumbsProps) {
+function Breadcrumbs({ paths }: Props) {
   return (
     <nav aria-label="breadcrumb" className="mb-8">
       <ul className="flex justify-center">
